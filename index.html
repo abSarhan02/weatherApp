@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather app</title>
+  <!--BOOTSTRAP CDN-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!--FONT AWESOME CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="position-relative">
+    <nav class="py-3">
+      <div class="container px-0 p-3 d-flex justify-content-between">
+        <div class="logo">
+          <a href="#">
+            <div class="d-flex">
+              <img class="w-25 p-0 m-0" src="assets/imgs/logo@2x.png" alt="site logo">
+              <div class="logo-text ms-3">
+                <h1 class="m-0">Weather</h1>
+                <p class="m-0">tagline goes here</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="list">
+          <ul>
+            <li><a href="#" class="text-white active">Home</a></li>
+            <li><a href="#" class="text-white">News</a></li>
+            <li><a href="#" class="text-white">Live cameras</a></li>
+            <li><a href="#" class="text-white">Photos</a></li>
+            <li><a href="#" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+        <i class=" bars fas fa-bars"></i> 
+        <div class="dropdown position-absolute">
+          <div class="d-list d-none">
+            <ul class="list-unstyled">
+              <li class="my-2"><a href="#" class="text-white">Home</a></li>
+              <li class="my-2"><a href="#" class="text-white">News</a></li>
+              <li class="my-2"><a href="#" class="text-white">Live cameras</a></li>
+              <li class="my-2"><a href="#" class="text-white">Photos</a></li>
+              <li class="my-2"><a href="#" class="text-white">Contact</a></li>
+            </ul>
+          </div>
+        </div> 
+      </div>
+    </nav>
+    
+  </header>
+  <main>
+    <!--HERO START-->
+    <section class="hero py-5 d-flex justify-content-center align-items-center">
+      <div class="container px-0 py-5 d-flex justify-content-center align-items-center">
+        <form class="location pb-5 mb-5 position-relative">
+          <input type="text" class="w-100 border-0 p-3 rounded-5 text-white" placeholder="Find your location..."
+            id="search">
+          <input type="button" class="border-0 position-absolute text-white rounded-5" value="Find" id="submit">
+          <div class="position-absolute alert alert-info p-2 d-none" role="alert">
+            please enter a valid location
+            <i id="close-alert" class="fa-solid fa-xmark mx-2"></i>
+          </div>
+        </form>
+      </div>
+
+    </section>
+    <!--HERO END-->
+
+    <!--CARDS START-->
+    <section id="weather-cards" class="cards dark-100 py-5">
+      <div class="container mb-4 p-0 rounded-4 overflow-hidden d-flex justify-content-center align-items-center">
+        <div class="row text-white w-100">
+          <!--FIRST CARD-->
+          <div id="card1" class="card col-lg-4 p-0 rounded-0 text-white dark-300">
+            <div class="card-header rounded-0 d-flex justify-content-between dark-200 text-gray">
+              <p id="card1-day">Wednesday</p>
+              <p id="card1-date">1 July</p>
+            </div>
+            <div class="card-body py-5">
+              <small id="card1-location" class="fs-5">Cairo</small>
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 id="card1-temp" class="card-title display-2 fw-bold me-3">28.1°C</h5>
+                <img id="card1-icon" src="assets/imgs/113 (1).png" alt="weather img" width="25%">
+              </div>
+              <small id="card1-condition" class="text-sky">Clear</small>
+              <div class="info d-flex gap-4 mt-4 mb-0">
+                <div>
+                  <img src="assets/imgs/icon-umberella.png" alt="umbrella">
+                  <small id="card1-humidity">87%</small>
+                </div>
+                <div>
+                  <img src="assets/imgs/icon-wind.png" alt="wind">
+                  <small id="card1-wind">42.1 km/h</small>
+                </div>
+                <div>
+                  <img src="assets/imgs/icon-compass.png" alt="compass">
+                  <small id="card1-direction">ovest</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--SECOND CARD-->
+          <div id="card2" class="card col-lg-4 p-0 rounded-0 text-white dark-200 text-center">
+            <div class="card-header rounded-0 d-flex justify-content-between text-gray">
+              <p id="card2-day">Monday</p>
+              <p id="card2-date">1 July</p>
+            </div>
+            <div class="card-body py-5">
+              <small id="card2-location" class="fs-5 d-block">Cairo</small>
+              <img id="card2-icon" src="assets/imgs/113 (1).png" alt="weather img" width="15%">
+              <h5 id="card2-temp" class="card-title fs-1">31.1°C</h5>
+              <small id="card2-condition" class="text-sky">Clear</small>
+            </div>
+          </div>
+          <!--THIRD CARD-->
+          <div id="card3" class="card col-lg-4 p-0 rounded-0 text-white dark-300 text-center">
+            <div class="card-header rounded-0 d-flex justify-content-between text-gray">
+              <p id="card3-day">Wednesday</p>
+              <p id="card3-date">1 July</p>
+            </div>
+            <div class="card-body py-5">
+              <small id="card3-location" class="fs-5 d-block"></small>
+              <img id="card3-icon" src="assets/imgs/113 (1).png" alt="weather img" width="15%">
+              <h5 id="card3-temp" class="card-title fs-1">35.5°C</h5>
+              <small id="card3-condition" class="text-sky">Sunny</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!--CARDS END-->
+
+  </main>
+  <footer class="dark-200 py-5">
+    <div class="container px-0 d-flex justify-content-center">
+      <div class="row w-100 d-flex  justify-content-between px-0">
+        <div class="col-md-8 col-sm-12">
+          <form class="end position-relative">
+            <input type="text" class="w-100 border-0 p-3 rounded-5" placeholder="Enter your email to subscribe..."
+              id="search">
+            <input type="button" class="border-0 position-absolute text-white rounded-5 px-3" value="Subscribe"
+              id="submit">
+          </form>
+        </div>
+        <div class="col-md-4 mt-2 d-flex justify-content-center align-items-center">
+          <ul class="social-links list-unstyled d-flex gap-2">
+            <li><a href="#" class="rounded-circle bg-dark p-2 d-grid justify-content-center"><i
+                  class=" d-flex justify-content-center align-items-center p-0 text-sky fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li><a href="#" class="rounded-circle bg-dark p-2 d-grid justify-content-center"><i
+                  class=" d-flex justify-content-center align-items-center p-0 text-sky fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li><a href="#" class="rounded-circle bg-dark p-2 d-grid justify-content-center"><i
+                  class=" d-flex justify-content-center align-items-center p-0 text-sky fa-brands fa-google-plus-g"></i></a>
+            </li>
+            <li><a href="#" class="rounded-circle bg-dark p-2 d-grid justify-content-center"><i
+                  class=" d-flex justify-content-center align-items-center p-0 text-sky fa-brands fa-pinterest"></i></a>
+            </li>
+          </ul>
+        </div>
+        <p class="text-gray mt-2">Copyright 2024 <span class="text-sky">AbTech</span>. Designed by <span
+            class="text-sky">Ab</span>. All rights reserved</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
