@@ -44,6 +44,9 @@
 }
 
 /**GENERAL STYLE START*/
+body{
+    min-height:100vh;
+}
 .alert{
     font-size: 12px;
     bottom: -25%;
